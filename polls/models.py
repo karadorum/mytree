@@ -7,6 +7,8 @@ class Category(models.Model):
     он не очень легкий, но разбирая его по частям, можно попробовать повторить + добавить templatetags
     """
     title = models.CharField(max_length=200)
+    left_visit = models.IntegerField(db_index=True)
+    right_visit = models.IntegerField(db_index=True)
 
 class Product(models.Model):
     title = models.CharField(max_length=200)
